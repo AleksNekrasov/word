@@ -14,15 +14,11 @@ int main()
     int s = 0;  // счетчик слов
     for (int start = 0; start < text.length(); start++)
     {
-        if(text[start] != ' ' && text[start+1] == ' ')
+        if(text[start] != ' ' && (text[start + 1] == ' ' || start + 1 == text.length()))
         {
             s++;
         }
-        if (text[text.length() - 1] != ' ')
-        {
-            s++;
-        }
-        std::cout << s << '\n';
+     
     }
     std::cout << "Answer: " << s;
 
